@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Category>
+  <category>laptop</category>
+  <firstname>victor</firstname>
+  <lastname>robles</lastname>
+  <address>23 lane</address>
+  <city>orlando</city>
+  <state>fl</state>
+  <zip>32800</zip>
+  <email>vr@du.edu</email>
+  <phone>407-900-8000</phone>
+  <Category>
+    <category>desktop</category>
+    <firstname>john</firstname>
+    <lastname>night</lastname>
+    <address>99 circle rd</address>
+    <city>orlando</city>
+    <state>fl</state>
+    <zip>32800</zip>
+    <email>jn@du.edu</email>
+    <phone>407-800-7000</phone>
+  </Category>
+  <Category>
+    <category>desktop</category>
+    <firstname>mike</firstname>
+    <lastname>tyson</lastname>
+    <address>56 cahuenga</address>
+    <city>los angeles</city>
+    <state>ca</state>
+    <zip>mt@du.edu</zip>
+    <email>90010</email>
+    <phone>310-900-9000</phone>
+  </Category>
+  <Category>
+    <category>laptop</category>
+    <firstname>jose</firstname>
+    <lastname>bonilla</lastname>
+    <address>123 magic lane</address>
+    <city>orlando</city>
+    <state>fl</state>
+    <zip>32800</zip>
+    <email>jb@du.edu</email>
+    <phone>407-799-9000</phone>
+  </Category>
+  <Category>
+    <category>laptop</category>
+    <firstname>victor</firstname>
+    <lastname>robles</lastname>
+    <address>123 magic lane</address>
+    <city>orlando</city>
+    <state>fl</state>
+    <zip>32800</zip>
+    <email>vr@du.edu</email>
+    <phone>407-900-8000</phone>
+  </Category>
+</Category>

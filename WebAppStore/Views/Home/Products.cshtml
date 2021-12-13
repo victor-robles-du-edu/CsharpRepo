@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h3>
+        <select class="form-control">
+
+            <option value=""></option>
+            @foreach (var g in Program.Products.GroupBy(x => x.Type).ToList())
+            {
+                <option value="@g.Key">@g.Key</option>
+                Program.typeSelected = g.Key;
+            }
+        </select>
+        <input type="submit" value="Submit">
+    </h3>
+
+    <form asp-page-handler="Print" method="post">
+        <button class="btn btn-default">FILTER</button>
+    </form>
+
+    <form method="post" action="">
+
+        @foreach (var s in Program.Products.Where(x => x.Type == Program.typeSelected).ToList())
+        {
+             WriteLiteral(s.Name + " " + s.Description + " " + s.Brand + " " + s.Price + "<br>");
+
+        }
+    </form>
+
+
+
+</div>

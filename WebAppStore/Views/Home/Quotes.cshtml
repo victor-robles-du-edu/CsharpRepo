@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Quotes";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h3>
+
+        @foreach (var f in Program.quotesPath.ToList())
+        {
+          
+            <a href="@f" target="_blank">@Program.quotesName[Program.quotesPath.IndexOf(f)]</a>
+            WriteLiteral("<br>");
+        }
+    </h3>
+</div>

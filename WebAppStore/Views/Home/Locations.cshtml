@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Locations";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h3>
+        <select class="form-control">
+
+            <option value=""></option>
+            @foreach (var s in Program.Stores.ToList())
+            {
+                @if (!(string.IsNullOrEmpty(s.Location)))
+                {
+                    <option value="@s.StoreId">@s.Location</option>
+                    Program.locationSelected = s.StoreId;
+                }
+            }
+        </select>
+    </h3>
+
+    <form asp-page-handler="Print" method="post">
+        <button class="btn btn-default">FILTER</button>
+    </form>
+
+    <form method="post" action="">
+        @foreach (var s in Program.Stores.Where(x => x.StoreId == Program.locationSelected).ToList())
+        {
+             WriteLiteral(s.StoreId + " " + s.Location + " " + s.Address + " " + s.City + " " + s.State + " " + s.Zip + " " + s.Lat + " " + s.Lon + "<br>");
+
+        }
+    </form>
+
+</div>

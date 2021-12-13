@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Victory E-Store</h1>
+    <h2 class="h4"> Owner: Victor Robles </h2>
+    <h2 class="h5"> Description : My Store Scenario is an E-Commerce Store that sells computer and networking equipment. It specializes in pre-built and customized-to-order computers, servers and netwok equipment. </h2>
+    <p>
+        <h2 class="h5"> Products Offer :</h2>
+        <h3>
+            @{
+                foreach (string cat in Program.categories)
+                    WriteLiteral(cat + "<br>");
+            }
+        </h3>
+    </p>
+
+    <p>
+        <h2 class="h5"> Desktop Specifications :</h2>
+        <h3>
+            @{
+                for (int i = 0; i < Program.desktopSpecs.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Program.desktopSpecs.GetLength(1); j++)
+                    {
+                        WriteLiteral(Program.desktopSpecs[i, j] + " ");
+                    }
+                    WriteLiteral("<br>");
+                }
+            }
+        </h3>
+    </p>
+
+    <p>
+        <h2 class="h5"> Laptop Specifications :</h2>
+        <h3>
+            @{
+                for (int i = 0; i < Program.laptopSpecs.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Program.laptopSpecs.GetLength(1); j++)
+                    {
+                        WriteLiteral(Program.laptopSpecs[i, j] + " ");
+                    }
+                    WriteLiteral("<br>");
+                }
+            }
+        </h3>
+    </p>
+
+    <p>
+        <h2 class="h5"> Notepad Specifications :</h2>
+        <h3>
+            @{
+                for (int i = 0; i < Program.notepadSpecs.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Program.notepadSpecs.GetLength(1); j++)
+                    {
+                        WriteLiteral(Program.notepadSpecs[i, j] + " ");
+                    }
+                    WriteLiteral("<br>");
+                }
+            }
+        </h3>
+    </p>
+
+    <p>
+        <h2 class="h5"> Cellphone Specifications :</h2>
+        <h3>
+            @{
+                for (int i = 0; i < Program.cellphoneSpecs.GetLength(0); i++)
+                {
+                    for (int j = 0; j < Program.cellphoneSpecs.GetLength(1); j++)
+                    {
+                        WriteLiteral(Program.cellphoneSpecs[i, j] + " ");
+                    }
+                    WriteLiteral("<br>");
+                }
+            }
+        </h3>
+    </p>
+
+    <p>
+        <h2 class="h5"> Inventory :</h2>
+        <h3>
+            @{
+                foreach (WebAppStore.Controllers.Computers PC in Program.Inventory)
+                    WriteLiteral("Type: " + PC.computerType + " Price: " + PC.price + " OS: "  + PC.OS + " Mem: " + PC.RAM + " Size: " + PC.diskSize + " Processor:  " + PC.processorCores + " <br>");
+
+            }
+        </h3>
+    </p>
+   
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

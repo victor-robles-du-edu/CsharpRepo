@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Laptops Products";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h3>
+    <p>
+        <font size="5" face="Courier New">
+            <table border="1" width="100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                </tr>
+                @foreach (var p in Program.Products.Where(x => x.Type == "Laptop").ToList())
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@p.Description</td>
+                        <td>@p.Brand</td>
+                        <td style="text-align:right">@p.Price.</td>
+                    </tr>
+                }
+            </table>
+        </font>
+    </p>
+    </h3>
+</div>

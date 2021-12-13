@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Mailing List";
+}
+
+<div class="text-center">
+    <p>
+        <h2 class="h5"> Mailing List :</h2>
+        <h3>
+            @{
+                foreach (WebAppStore.Controllers.Customer C in Program.Customers)
+                {
+                    WriteLiteral("\t" + "Name: " + C.FirstName + " " + C.LastName + " <br>");
+                    WriteLiteral("\t" + "Address: " + C.Address + ", " + C.City + ", " + C.State + ", " + C.Zip + " <br>");
+                    WriteLiteral("\t" + "Email: " + C.Email + ", " + "Phone: " + C.Phone + " <br>");
+                    WriteLiteral("<br>");
+                }
+
+            }
+        </h3>
+    </p>
+
+</div>

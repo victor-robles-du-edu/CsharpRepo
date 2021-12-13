@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h3>
+
+        @foreach (var u in Program.Users.ToList())
+        {
+            WriteLiteral(u + "<br>");
+        }
+    </h3>
+</div>
